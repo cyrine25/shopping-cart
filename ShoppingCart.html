@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylecart.css">
+   <script src="ex.js"async></script>
+   
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+</head>
+<body>
+
+    <header>
+        <h1>My Delicious Cart</h1>
+        <p>Don't be shy ! Pick what you want ...</p>
+    </header>
+    <main>
+        <!--cart conatiner-->
+        <section>
+            <div class="cart-container">
+                
+                <ul class="cart">
+                    <!--item 1-->
+                    <li class="product">
+                        <div class="product-preview">
+                            <div class="thumbnail">
+                              <input type="checkbox"id="check1" onclick="total('check1','price1','inp1')">
+                              
+                              <img class="image" src="https://s.cdpn.io/24822/sidebar-cupcake.png" />
+                            </div>
+                            <div class="product-paper">
+                              <div class="product-name">
+                                Cupcake
+                                <i onclick="setColor('btn1','#ff4081')" id="btn1"style="float: right;"  class="far fa-heart"></i>
+                              </div>
+                              <div id="price1" class="product-price">
+                                 6 dt
+                              </div>
+                            </div>
+                          </div>
+                          <input id="inp1" class="product-quantity" type="number" value="0"> 
+                          
+                        </input>
+                          <div class="product-interactions">
+                            <div class="button plus"onclick="increase('inp1','price1',6,'check1')">
+                              +
+                            </div>
+                            <div class="button minus"onclick="decrease('inp1','price1',6,'check1')">
+                              -
+                            </div>
+                            <div class="button del">
+                                x
+                            </div>
+                          </div>
+                    </li>
+                    
+                    <!--item 2-->
+                    <li class="product">
+                      <div class="product-preview">
+                          <div class="thumbnail">
+                            <input type="checkbox"id="check2" onclick="total('check2','price2','inp2')">
+                            <img class="image" src="Marshmallow.png" />
+                          </div>
+                          <div class="product-paper">
+                            <div class="product-name">
+                              Marshmallow
+                              <i onclick="setColor('btn2','#ff4081')" id="btn2"style="float: right;"  class="far fa-heart"></i>
+                            </div>
+                            <div id="price2" class="product-price">
+                               8.4 dt
+                            </div>
+                          </div>
+                        </div>
+                        <input id="inp2" class="product-quantity"type="number" value="0"> 
+                          
+                        </input>
+                        <div class="product-interactions">
+                          <div class="button plus"onclick="increase('inp2','price2',8.4,'check2')">
+                            +
+                          </div>
+                          <div class="button minus"onclick="decrease('inp2','price2',8.4,'check2')">
+                            -
+                          </div>
+                          <div class="button del">
+                              x
+                          </div>
+                        </div>
+                  </li>
+                     <!--item 3-->
+                    <li class="product">
+                        <div class="product-preview">
+                          <div class="thumbnail">
+                            <input type="checkbox"id="check3" onclick="total('check3','price3','inp3')">
+                            <img class="image" src="https://s.cdpn.io/24822/Chocolate.png" />
+                          </div>
+                          <div class="product-paper">
+                            <div class="product-name">
+                              Chocolate
+                              <i onclick="setColor('btn3','#ff4081')"id="btn3" style="float: right;" class="far fa-heart"></i>
+                            </div>
+                            <div id="price3" class="product-price">
+                               3.70 dt
+                            </div>
+                          </div>
+                        </div>
+                        <input id="inp3" class="product-quantity"type="number" value="0"> 
+                          
+                        </input>
+                        <div class="product-interactions">
+                          <div class="button plus"onclick="increase('inp3','price3',3.7,'check3')">
+                            +
+                          </div>
+                          <div class="button minus"onclick="decrease('inp3','price3',3.7,'check3')">
+                            -
+                          </div>
+                          <div class="button del">
+                              x
+                          </div>
+                        </div>
+                      </li>
+                       <!--item 4-->
+                      <li class="product">
+                        <div class="product-preview">
+                          <div class="thumbnail">
+                            <input type="checkbox"id="check4" onclick="total('check4','price4','inp4')">
+                            <img class="image" src="https://s.cdpn.io/24822/waffle-homestyle.png" />
+                          </div>
+                          <div class="product-paper">
+                            <div class="product-name">
+                              Waffle
+                              <i onclick="setColor('btn4','#ff4081')"id="btn4" style="float: right;" class="far fa-heart"></i>
+                            </div>
+                            <div id="price4" class="product-price">
+                               8.2 dt
+                            </div>
+                          </div>
+                        </div>
+                        <input id="inp4" class="product-quantity"type="number" value="0"> 
+                        
+                      </input>
+                        <div class="product-interactions">
+                          <div class="button plus"onclick="increase('inp4','price4',8.2,'check4')">
+                            +
+                          </div>
+                          <div class="button minus"onclick="decrease('inp4','price4',8.2,'check4')">
+                            -
+                          </div>
+                          <div class="button del">
+                              x
+                          </div>
+                        </div>
+                      </li>
+                       <!--item 5-->
+                      <li class="product">
+                        <div class="product-preview">
+                          <div class="thumbnail">
+                            <input type="checkbox"id="check5" onclick="total('check5','price5','inp5')">
+                            <img class="image" src="https://s.cdpn.io/24822/donuts.jpg" />
+                          </div>
+                          <div class="product-paper">
+                            <div class="product-name">
+                              Donuts
+                              <i onclick="setColor('btn5','#ff4081')" id="btn5"style="float: right;"  class="far fa-heart"></i>
+                            </div>
+                            <div id="price5" class="product-price">
+                              3.90 dt
+                            </div>
+                          </div>
+                        </div>
+                        <input id="inp5" class="product-quantity"type="number" value="0"> 
+                        
+                      </input>
+                        <div class="product-interactions">
+                          <div class="button plus" onclick="increase('inp5','price5',3.9,'check5')">
+                            +
+                          </div>
+                          <div class="button minus"onclick="decrease('inp5','price5',3.9,'check5')">
+                            -
+                          </div>
+                          <div class="button del">
+                              x
+                          </div>
+                        </div>
+                      </li>
+                       <!--item 6-->
+                      <li class="product">
+                        <div class="product-preview">
+                          <div class="thumbnail">
+                            <input type="checkbox"id="check6" onclick="total('check6','price6','inp6')">
+                            <img class="image" height="180px" src="Cookies.png" />
+                          </div>
+                          <div class="product-paper">
+                            <div class="product-name">
+                                Cookies
+                                <i onclick="setColor('btn6','#ff4081')" id="btn6" style="float: right;" class="far fa-heart"></i>
+                            </div>
+                            <div id="price6" class="product-price">
+                               2.50 dt
+                            </div>
+                          </div>
+                        </div>
+                        <input id="inp6" class="product-quantity"type="number" value="0"> 
+                        
+                      </input>
+                        <div class="product-interactions">
+                          <div class="button plus"onclick="increase('inp6','price6',2.5,'check6')">
+                            +
+                          </div>
+                          <div class="button minus"onclick="decrease('inp6','price6',2.5,'check6')">
+                            -
+                          </div>
+                          <div class="button del">
+                              x
+                          </div>
+                        </div>
+                      </li>
+                       <!--item 7-->
+                      <li class="product">
+                        <div class="product-preview">
+                          <div class="thumbnail">
+                            <input type="checkbox"id="check7" onclick="total('check7','price7','inp7')">
+                            <img class="image" src="https://s.cdpn.io/24822/croissant-psd49504.png" />
+                          </div>
+                          <div class="product-paper">
+                            <div class="product-name">
+                              French Croissant
+                              <i onclick="setColor('btn7','#ff4081')" id="btn7" style="float: right;" class="far fa-heart"></i>
+                            </div>
+                            <div id="price7" class="product-price">
+                               1.80 dt
+                            </div>
+                          </div>
+                        </div>
+                        <input id="inp7" class="product-quantity"type="number" value="0"> 
+                        
+                      </input>
+                        <div class="product-interactions">
+                          <div class="button plus"onclick="increase('inp7','price7',1.8,'check7')">
+                            +
+                          </div>
+                          <div class="button minus"onclick="decrease('inp7','price7',1.8,'check7')">
+                            -
+                          </div>
+                          <div class="button del">
+                              x
+                          </div>
+                        </div>
+                      </li>
+                       <!--item 8-->
+                      <li class="product">
+                        <div class="product-preview">
+                          <div class="thumbnail">
+                            <input type="checkbox"id="check8" onclick="total('check8','price8','inp8')">
+                            <img class="image" src="https://s.cdpn.io/24822/Macaron.png" />
+                          </div>
+                          <div class="product-paper">
+                            <div class="product-name">
+                              Macaron
+                              <i onclick="setColor('btn8','#ff4081')"id="btn8"style="float: right;"  class="far fa-heart"></i>
+                            </div>
+                            <div id="price8" class="product-price">
+                              2.50 dt
+                            </div>
+                          </div>
+                        </div>
+                        <input id="inp8" class="product-quantity"type="number" value="0"> 
+                        
+                      </input>
+                        <div class="product-interactions">
+                          <div class="button plus"onclick="increase('inp8','price8',2.5,'check8')">
+                            +
+                          </div>
+                          <div class="button minus"onclick="decrease('inp8','price8',2.5,'check8')">
+                            -
+                          </div>
+                          <div class="button del">
+                              x
+                          </div>
+                        </div>
+                      </li>
+                       <!--item 9-->
+                      <li class="product">
+                        <div class="product-preview">
+                          <div class="thumbnail">
+                            <input type="checkbox"id="check9" onclick="total('check9','price9','inp9')">
+                            <img class="image" src="https://s.cdpn.io/24822/millefeuille-vanille.jpg" />
+                          </div>
+                          <div class="product-paper">
+                            <div class="product-name">
+                              Mille-feuille
+                              <i onclick="setColor('btn9','#ff4081')"id="btn9" style="float: right;"  class="far fa-heart"></i>
+                            </div>
+                            <div id="price9" class="product-price">
+                              8.90 dt
+                            </div>
+                          </div>
+                        </div>
+                        <input id="inp9" class="product-quantity"type="number" value="0"> 
+                        
+                      </input>
+                        <div class="product-interactions">
+                          <div class="button plus"onclick="increase('inp9','price9',8.9,'check9')">
+                            +
+                          </div>
+                          <div class="button minus"onclick="decrease('inp9','price9',8.9,'check9')">
+                            -
+                          </div>
+                          <div class="button del">
+                              x
+                          </div>
+                        </div>
+                      </li>
+                       <!--item 10-->
+                      <li class="product">
+                        <div class="product-preview">
+                          <div class="thumbnail">
+                            <input type="checkbox"id="check10" onclick="total('check10','price10','inp10')">
+                            <img class="image" src="https://s.cdpn.io/24822/tarte-au-citron.jpg" />
+                          </div>
+                          <div class="product-paper">
+                            <div class="product-name">
+                              Lemon Pie
+                              <i onclick="setColor('btn10','#ff4081')"id="btn10" style="float: right;" class="far fa-heart"></i>
+                            </div>
+                            <div id="price10" class="product-price">
+                              17.90 dt
+                            </div>
+                          </div>
+                        </div>
+                        <input id="inp10" class="product-quantity"type="number" value="0"> 
+                        
+                      </input>
+                        <div class="product-interactions">
+                          <div class="button plus"onclick="increase('inp10','price10',17.9,'check10')">
+                            +
+                          </div>
+                          <div class="button minus"onclick="decrease('inp10','price10',17.9,'check10')">
+                            -
+                          </div>
+                          <div class="button del">
+                              x
+                          </div>
+                        </div>
+                      </li>
+                      <!--item11-->
+                      <li class="product">
+                        <div class="product-preview">
+                          <div class="thumbnail">
+                            <input type="checkbox"id="check11" onclick="total('check11','price11','inp11')">
+                            <img class="image" src="cake.png" />
+                          </div>
+                          <div class="product-paper">
+                            <div class="product-name">
+                              chocolate cake
+                              <i onclick="setColor('btn11','#ff4081')"id="btn11"style="float: right;"  class="far fa-heart"></i>
+                            </div>
+                            <div id="price11" class="product-price">
+                              40.90 dt
+                            </div>
+                          </div>
+                        </div>
+                        <input id="inp11" class="product-quantity"type="number" value="0"> 
+                        
+                      </input>
+                        <div class="product-interactions">
+                          <div class="button plus"onclick="increase('inp11','price11',40.9,'check11')">
+                            +
+                          </div>
+                          <div class="button minus"onclick="decrease('inp11','price11',40.9,'check11')">
+                            -
+                          </div>
+                          <div class="button del">
+                              x
+                          </div>
+                        </div>
+                      </li>
+                      <!--item12-->
+                      <li class="product">
+                        <div class="product-preview">
+                          <div class="thumbnail">
+                            <input type="checkbox" id="check12" onclick="total('check12','price12','inp12')">
+                            <img class="image" height="180px" src="sweet.png" />
+                          </div>
+                          <div class="product-paper">
+                            <div class="product-name">
+                              Sweet Bread
+                              <i onclick="setColor('btn12','#ff4081')"id="btn12" style="float: right;" class="far fa-heart"></i>
+                            </div>
+                            <div id="price12" class="product-price">
+                               4.30 dt
+                            </div>
+                          </div>
+                        </div>
+                        <input id="inp12" class="product-quantity"type="number" value="0"> 
+                          
+                        </input>
+                        <div class="product-interactions">
+                          <div class="button plus" onclick="increase('inp12','price12',4.3,'check12')">
+                            +
+                          </div>
+                          <div class="button minus"onclick="decrease('inp12','price12',4.3,'check12')">
+                            -
+                          </div>
+                          <div class="button del">
+                              x
+                          </div>
+                        </div>
+                      </li> 
+                </ul>
+            </div>
+        </section>
+        <section>
+            <table class="bill">
+                <tr class="total">
+                  <td class="label">
+                    Total :
+                  </td>
+                  <td class="value1" id="total">
+                     0 dt
+                  </td>
+                </tr>
+              </table>
+        </section>
+        
+<section>
+<div class="actions">
+    <div class="go">
+      Get them !
+    </div>
+  </div>
+  <div class="actions">
+    <div class="return">
+      Return to shop
+    </div>
+  </div>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/04ab67b9d6.js" crossorigin="anonymous"></script>
+</body>
+</html>
